@@ -16,14 +16,14 @@ C64 FDD For Fun
 #### Serial Bus Pinouts
 
 
-    | Pin | Name    | Description               |
-    |-----|---------|---------------------------|
-    | 1   | SRQ     | Serial Service Request In |
-    | 2   | GND     | Ground                    |
-    | 3   | ATN     | Serial Attention In/Out   |
-    | 4   | CLK     | Serial Clock In/Out       |
-    | 5   | DATA    | Serial Data In/Out        |
-    | 6   | RESET   | Serial Reset              |
+     Pin | Name    | Description               
+    -----|---------|---------------------------
+     1   | SRQ     | Serial Service Request In 
+     2   | GND     | Ground                    
+     3   | ATN     | Serial Attention In/Out   
+     4   | CLK     | Serial Clock In/Out       
+     5   | DATA    | Serial Data In/Out        
+     6   | RESET   | Serial Reset              
 
     All signals are active low.
 
