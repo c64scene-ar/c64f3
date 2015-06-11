@@ -78,6 +78,7 @@ C64 FDD For Fun
 
 #### Serial Bus Timing
 
+
 ```
  ___
  CLK    |____|~~~~| Ts Bit Set-up time
