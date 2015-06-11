@@ -8,21 +8,22 @@ C64 FDD For Fun
 1. Schematics
 2. Firmware
 3. Information.
-4. Misc.
+4. Serial Bus information
 
- C64 SERIAL BUS
-
-
- Serial Bus Pinouts
+### C64 Serial Bus Information
 
 
-    Pin Name    Description
-     1  SRQ Serial Service Request In
-     2  GND Ground
-     3  ATN Serial Attention In/Out
-     4  CLK Serial Clock In/Out
-     5  DATA    Serial Data In/Out
-     6  RESET   Serial Reset
+#### Serial Bus Pinouts
+
+
+    | Pin | Name    | Description |
+    |-----|---------|-------------|
+    | 1  | SRQ     | Serial Service Request In |
+    | 2  | GND     | Ground |
+    | 3  | ATN     | Serial Attention In/Out |
+    | 4  | CLK     | Serial Clock In/Out |
+    | 5  | DATA    | Serial Data In/Out |
+    | 6  | RESET   | Serial Reset |
 
     All signals are active low.
 
@@ -75,7 +76,7 @@ C64 FDD For Fun
 
 
 
-  Serial Bus Timing
+#### Serial Bus Timing
 
 ```
  ___
@@ -168,10 +169,10 @@ C64 FDD For Fun
 
 
 
-  Serial Bus Timing
+#### Serial Bus Timing
 
 
-    Description         Symbol   Min     Typ     Max
+    | Description         | Symbol   | Min     | Typ     | Max |
 
     ATN Response (required) 1)   Tat      -   - 1000us
     Listener Hold-Off        Th   0   -  oo
@@ -191,11 +192,11 @@ C64 FDD For Fun
     EOI Acknowledge          Tfr     60us     -   -
 
 
-   Notes:
-    1.  If maximum time exceeded, device not present error.
-    2.  If maximum time exceeded, EOI response required.
-    3.  If maximum time exceeded, frame error.
-    4.  Tv and Tpr minimum must be 60us for external device to be a talker.
-    5.  Tei minimum must be 80us for external device to be a listener.
+#### Notes:
+1.  If maximum time exceeded, device not present error.
+2.  If maximum time exceeded, EOI response required.
+3.  If maximum time exceeded, frame error.
+4.  Tv and Tpr minimum must be 60us for external device to be a talker.
+5.  Tei minimum must be 80us for external device to be a listener.
 
 
