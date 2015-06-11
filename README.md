@@ -47,11 +47,13 @@ C64 FDD For Fun
  device addressed, meaning the secondary address and channel on the peripheral.
  Such a command can be one of the following:
 
+'''
 	20
 	40
 	60
 	E0
 	F0
+'''
 
  
   CLK: Serial Clock In/Out
@@ -75,6 +77,7 @@ C64 FDD For Fun
 
   Serial Bus Timing
 
+'''
  ___
  CLK    |____|~~~~|	Ts Bit Set-up time
 	: Ts : Tv :	Tv Bit Valid time
@@ -98,10 +101,12 @@ C64 FDD For Fun
 		      :     : Data Valid	  Listener: Data Accepted
 		      : Listener READY-FOR-DATA
 
+'''
 
 
 
 		END-OR-IDENTIFY HANDSHAKE (LAST BYTE IN MESSAGE)
+'''
  ___	_______________________________________________________________________
  ATN
  ___	 ___ ___      ________________ ___ ___ ___ ___ ___ ___ ___ ___       __
@@ -116,11 +121,13 @@ C64 FDD For Fun
 		      :	 :   : EOI-Timeout Handshake		  Line Release
 		      :	 : Listener READY-FOR-DATA
 		      : Talker Ready-To-Send
+'''
 
 
 
 
 		TALK-ATTENTION TURN AROUND (TALKER AND LISTENER REVERSED)
+'''
  ___	             _________________________________________________________
  ATN	_____________|
 		     :
@@ -139,10 +146,10 @@ C64 FDD For Fun
 		     :   :   : Device acknowledges it's now TALKER.
 		     :   : Becomes LISTENER, Clock = High, Data = Low
 		     : Talker Ready-To-Send
+'''
 
 
-
-
+'''
  ___	_____________________________________________________________________
  ATN
  ___	    _________ ___ ___ ___ ___ ___ ___ ___ ___       ________ ___ ___
@@ -157,6 +164,7 @@ C64 FDD For Fun
 	    :	:   : TALKER SENDING		Listener: Data Accepted
 	    :	: LISTENER READY-FOR-DATA
 	    : TALKER READY-TO-SEND
+'''
 
 
 
@@ -184,10 +192,10 @@ C64 FDD For Fun
 
 
    Notes:
-	1)  If maximum time exceeded, device not present error.
-	2)  If maximum time exceeded, EOI response required.
-	3)  If maximum time exceeded, frame error.
-	4)  Tv and Tpr minimum must be 60us for external device to be a talker.
-	5)  Tei minimum must be 80us for external device to be a listener.
+	1.  If maximum time exceeded, device not present error.
+	2.  If maximum time exceeded, EOI response required.
+	3.  If maximum time exceeded, frame error.
+	4.  Tv and Tpr minimum must be 60us for external device to be a talker.
+	5.  Tei minimum must be 80us for external device to be a listener.
 
 
