@@ -173,24 +173,24 @@ C64 FDD For Fun
 #### Serial Bus Timing
 
 
-    | Description         | Symbol   | Min     | Typ     | Max |
-
-    ATN Response (required) 1)   Tat      -   - 1000us
-    Listener Hold-Off        Th   0   -  oo
-    Non-EOI Response to RFD 2)   Tne      -  40us   200us
-    Bit Set-Up Talker  4)        Ts  20us    70us     -
-    Data Valid           Tv  20us    20us     -
-    Frame Handshake  3)      Tf   0   20    1000us
-    Frame to Release of ATN      Tr  20us     -   -
-    Between Bytes Time       Tbb    100us     -   -
-    EOI Response Time        Tye    200us   250us     -
-    EOI Response Hold Time  5)   Tei     60us     -   -
-    Talker Response Limit        Try      0  30us    60us
-    Byte-Acknowledge  4)         Tpr     20us    30us     -
-    Talk-Attention Release       Ttk     20us    30us   100us
-    Talk-Attention Acknowledge   Tdc      0   -   -
-    Talk-Attention Ack. Hold     Tda     80us     -   -
-    EOI Acknowledge          Tfr     60us     -   -
+     Description                | Symbol   | Min     | Typ     | Max 
+    ----------------------------|----------|---------|---------|----
+    ATN Response (required) 1)  |   Tat    |  -      |    -    |   1000us
+    Listener Hold-Off           |   Th     |  0      |    -    |   oo
+    Non-EOI Response to RFD 2)  |   Tne    |  -      |    40us |   200us
+    Bit Set-Up Talker  4)       |   Ts     | 20us    |    70us |    -
+    Data Valid                  |   Tv     | 20us    |    20us |    -
+    Frame Handshake  3)         |   Tf     | 0       |    20   |   1000us
+    Frame to Release of ATN     |   Tr     | 20us    |    -    |   -
+    Between Bytes Time          |   Tbb    | 100us   |    -    |   -
+    EOI Response Time           |   Tye    | 200us   |    250us|   -
+    EOI Response Hold Time  5)  |   Tei    | 60us    |    -    |   -
+    Talker Response Limit       |   Try    | 0       |    30us |   60us
+    Byte-Acknowledge  4)        |   Tpr    | 20us    |    30us |   -
+    Talk-Attention Release      |   Ttk    | 20us    |    30us |   100us
+    Talk-Attention Acknowledge  |   Tdc    | 0       |    -    |   -
+    Talk-Attention Ack. Hold    |   Tda    | 80us    |    -    |   -
+    EOI Acknowledge             |   Tfr    | 60us    |    -    |   -
 
 
 #### Notes
