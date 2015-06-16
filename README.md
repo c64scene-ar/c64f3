@@ -204,6 +204,7 @@ C64 FDD For Fun
 ### 5. DIN-6 board connection
 
               _____
+```
 (SRQ) ----- /       \ ---- DATA
            / O     O \
      N/C --|--> O    |
@@ -211,3 +212,4 @@ C64 FDD For Fun
             \___O___/
                 |
               ATN (2nd test PIN on the left)
+```
