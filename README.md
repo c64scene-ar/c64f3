@@ -203,8 +203,8 @@ C64 FDD For Fun
 
 ### 5. DIN-6 board connection
 
-              _____
 ```
+              _____
 (SRQ) ----- /       \ ---- DATA
            / O     O \
      N/C --|--> O    |
