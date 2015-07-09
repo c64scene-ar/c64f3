@@ -203,6 +203,7 @@ C64 FDD For Fun
 
 ### 5. DIN-6 board connection
 
+```
     Rear view of the C64 connector
 
                   _____     < YELLOW > 
@@ -214,3 +215,4 @@ C64 FDD For Fun
                     |
                   ATN (2nd test PIN on the left)
                 < BLUE >
+```
