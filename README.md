@@ -203,13 +203,14 @@ C64 FDD For Fun
 
 ### 5. DIN-6 board connection
 
-```
-              _____
-(SRQ) ----- /       \ ---- DATA
-           / O     O \
-     N/C --|--> O    |
- GND  -----\ O     O / ---- CLK
-            \___O___/
-                |
-              ATN (2nd test PIN on the left)
-```
+    Rear view of the C64 connector
+
+                  _____     < YELLOW > 
+    (SRQ) ----- /       \ ---- DATA
+               / O     O \
+         N/C --|--> O    |
+ CLK      -----\ O     O / ----   GND 
+< BLACK >       \___O___/      < BROWN >
+                    |
+                  ATN (2nd test PIN on the left)
+                < BLUE >
