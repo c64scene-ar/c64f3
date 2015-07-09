@@ -209,7 +209,9 @@ C64 FDD For Fun
                   _____     < YELLOW > 
     (SRQ) ----- /       \ ---- DATA
                / O     O \
-         N/C --|--> O    |
+              |           |
+         N/C--|---> O     |
+              |           |
  CLK      -----\ O     O / ----   GND 
 < BLACK >       \___O___/      < BROWN >
                     |
