@@ -14,13 +14,25 @@ def main(capture_dev):
     x = [i for i in xrange(2000)]
     #y = [[((k>>2) & 1), ((k >> 1) & 1), (k & 1)] for k in fd.read()]
     y = []
-    for i in xrange(2000):
-        stdout.write("[+] Sample %d\r" % i)
+    i = 0
+    while True:#for i in xrange(2000):
+        stdout.write("\r[+] Sample %09d " % i)
         ch = serial.read(1)
         if ch == "":
-            print "nada @ %d        " % i
+            #print "nada @ %d        " % i
             continue
-        y.append(ord(ch))
+        #y.append(ord(ch))
+
+        packed = ord(ch)
+        data = (packed >> 2) & 1
+        clk = (packed >> 1) & 1
+        atn = packed & 1
+        stdout.write("-> D:%d - C:%d - A:%d" % (data, clk, atn))
+        #if (data | clk | atn) == 1:
+        if clk == 0:
+            break
+        i += 1
+
 
     serial.close()
     #x = np.linspace(0.0, 5,5, 100)
@@ -33,12 +45,6 @@ def main(capture_dev):
 
     #plt.subplots_adjust(left=0.15)
     #plt.show()
-
-    for i in y:
-        data = (i >> 2) & 1
-        clk = (i >> 1) & 1
-        atn = i & 1
-        print "-> %d - %d - %d" % (data, clk, atn)
 
 if __name__ == "__main__":
     if len(argv) != 2:

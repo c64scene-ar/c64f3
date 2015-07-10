@@ -1,7 +1,7 @@
 //#include <Console.h>
 #include <stdarg.h>
 
-int iToPC, iToC64;
+int iToC64;
 char format[100];
 
 // digital pin 2 has a pushbutton attached to it. Give it a name:
@@ -50,7 +50,7 @@ void loop() {
   data_state = digitalRead(data_button);
   clk_state = digitalRead(clk_button);
   
-  if (1) {
+  if (0) {
     snprintf(format, sizeof(format), ">>> ATN : %d - CLK : %d - DATA : %d", atn_state, clk_state, data_state);
     Serial.println(format);
     
@@ -60,7 +60,6 @@ void loop() {
     }
   }
   else {
-    iToPC = (data_state << 2) & (clk_state << 1) & atn_state;
-    Serial.write(iToPC);
+    Serial.write(data_state << 2) | (clk_state << 1) | atn_state;
   }
 }
