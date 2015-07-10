@@ -50,13 +50,13 @@ void loop() {
   data_state = digitalRead(data_button);
   clk_state = digitalRead(clk_button);
   
-  if (0) {
+  if (1) {
     snprintf(format, sizeof(format), ">>> ATN : %d - CLK : %d - DATA : %d", atn_state, clk_state, data_state);
     Serial.println(format);
     
     if ((atn_state | data_state | clk_state) == 1) {
       Serial.println("Gotcha.....");
-      delay(20000);
+      //delay(1000);
     }
   }
   else {
