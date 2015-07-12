@@ -1,0 +1,4 @@
+peticon.o: ../../../../../src/arch/unix/x11/peticon.c \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

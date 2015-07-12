@@ -1,0 +1,365 @@
+scpu64ui.o: ../../../../../src/arch/unix/gui/scpu64ui.c \
+ /usr/include/stdc-predef.h ../../../../../src/vice.h \
+ ../../../../src/config.h /usr/include/libintl.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/xlocale.h \
+ /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string2.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap-16.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/string3.h \
+ ../../../../../src/c64/c64model.h ../../../../../src/arch/unix/types.h \
+ ../../../../../src/cartridge.h ../../../../../src/sound.h \
+ ../../../../../src/vice.h /usr/include/linux/soundcard.h \
+ /usr/include/linux/ioctl.h /usr/include/x86_64-linux-gnu/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h /usr/include/linux/patchkey.h \
+ /usr/include/x86_64-linux-gnu/sys/soundcard.h ../../../../../src/cia.h \
+ ../../../../src/debug.h ../../../../../src/arch/unix/icon.h \
+ ../../../../../src/machine.h ../../../../../src/machine-video.h \
+ ../../../../../src/resources.h ../../../../../src/sid/sid.h \
+ ../../../../../src/sound.h ../../../../../src/uiapi.h \
+ ../../../../../src/arch/unix/gui/uiattach.h \
+ ../../../../../src/arch/unix/uimenu.h \
+ ../../../../../src/arch/unix/types.h \
+ ../../../../../src/arch/unix/x11/xaw/uimenu.h \
+ ../../../../../src/arch/unix/ui.h ../../../../../src/imagecontents.h \
+ ../../../../../src/arch/unix/gui/uilib.h \
+ ../../../../../src/arch/unix/x11/xaw/uiarch.h \
+ /usr/include/X11/Intrinsic.h /usr/include/X11/Xlib.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/X11/X.h \
+ /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
+ /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
+ /usr/include/X11/keysymdef.h /usr/include/X11/Xresource.h \
+ /usr/include/X11/Core.h /usr/include/X11/Composite.h \
+ /usr/include/X11/Constraint.h /usr/include/X11/Object.h \
+ /usr/include/X11/RectObj.h /usr/include/X11/StringDefs.h \
+ ../../../../../src/arch/unix/x11/xaw/uitapestatus.h \
+ ../../../../../src/arch/unix/x11/xaw/../x11menu.h \
+ ../../../../../src/arch/unix/gui/uihotkey.h \
+ ../../../../../src/arch/unix/x11/xaw/../xaw/uiarch.h \
+ ../../../../../src/arch/unix/gui/uic64cart.h \
+ ../../../../../src/arch/unix/gui/uicommands.h \
+ ../../../../../src/arch/unix/gui/uidigimax.h \
+ ../../../../../src/arch/unix/gui/uidqbb.h \
+ ../../../../../src/arch/unix/gui/uidrive.h \
+ ../../../../../src/arch/unix/gui/uidrivec64.h \
+ ../../../../../src/arch/unix/gui/uidrivec64c128.h \
+ ../../../../../src/arch/unix/gui/uidrivec64vic20.h \
+ ../../../../../src/arch/unix/gui/uids12c887rtc.h \
+ ../../../../../src/arch/unix/gui/uieasyflash.h \
+ ../../../../../src/arch/unix/gui/uiedit.h \
+ ../../../../../src/arch/unix/gui/uiexpert.h \
+ ../../../../../src/arch/unix/gui/uigeoram.h \
+ ../../../../../src/arch/unix/gui/uiide64.h \
+ ../../../../../src/arch/unix/gui/uiisepic.h \
+ ../../../../../src/arch/unix/gui/uijoystick2.h \
+ ../../../../../src/arch/unix/gui/uikeyboard.h \
+ ../../../../../src/arch/unix/gui/uimagicvoice.h \
+ ../../../../../src/arch/unix/gui/uimidi.h \
+ ../../../../../src/arch/unix/gui/uimmc64.h \
+ ../../../../../src/arch/unix/gui/uimmcreplay.h \
+ ../../../../../src/arch/unix/gui/uimouse.h \
+ ../../../../../src/arch/unix/gui/uinetplay.h \
+ ../../../../../src/arch/unix/gui/uilightpen.h \
+ ../../../../../src/arch/unix/gui/uiperipheraliec.h \
+ ../../../../../src/arch/unix/gui/uiprinteriec.h \
+ ../../../../../src/arch/unix/gui/uiram.h \
+ ../../../../../src/arch/unix/gui/uiramcart.h \
+ ../../../../../src/arch/unix/gui/uiretroreplay.h \
+ ../../../../../src/arch/unix/gui/uireu.h \
+ ../../../../../src/arch/unix/gui/uiromset.h \
+ ../../../../../src/arch/unix/gui/uirs232c64c128.h \
+ ../../../../../src/arch/unix/gui/uiscpu64.h \
+ ../../../../../src/arch/unix/gui/uiscreenshot.h \
+ ../../../../../src/arch/unix/gui/uisettings.h \
+ ../../../../../src/arch/unix/gui/uisid.h \
+ ../../../../../src/arch/unix/gui/uisound.h \
+ ../../../../../src/arch/unix/gui/uisoundexpander.h \
+ ../../../../../src/arch/unix/gui/uitfe.h \
+ ../../../../../src/arch/unix/gui/uitpi.h \
+ ../../../../../src/arch/unix/gui/uivicii.h ../../../../../src/vsync.h \
+ ../../../../../src/vicii.h
+
+/usr/include/stdc-predef.h:
+
+../../../../../src/vice.h:
+
+../../../../src/config.h:
+
+/usr/include/libintl.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string2.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/string3.h:
+
+../../../../../src/c64/c64model.h:
+
+../../../../../src/arch/unix/types.h:
+
+../../../../../src/cartridge.h:
+
+../../../../../src/sound.h:
+
+../../../../../src/vice.h:
+
+/usr/include/linux/soundcard.h:
+
+/usr/include/linux/ioctl.h:
+
+/usr/include/x86_64-linux-gnu/asm/ioctl.h:
+
+/usr/include/asm-generic/ioctl.h:
+
+/usr/include/linux/patchkey.h:
+
+/usr/include/x86_64-linux-gnu/sys/soundcard.h:
+
+../../../../../src/cia.h:
+
+../../../../src/debug.h:
+
+../../../../../src/arch/unix/icon.h:
+
+../../../../../src/machine.h:
+
+../../../../../src/machine-video.h:
+
+../../../../../src/resources.h:
+
+../../../../../src/sid/sid.h:
+
+../../../../../src/sound.h:
+
+../../../../../src/uiapi.h:
+
+../../../../../src/arch/unix/gui/uiattach.h:
+
+../../../../../src/arch/unix/uimenu.h:
+
+../../../../../src/arch/unix/types.h:
+
+../../../../../src/arch/unix/x11/xaw/uimenu.h:
+
+../../../../../src/arch/unix/ui.h:
+
+../../../../../src/imagecontents.h:
+
+../../../../../src/arch/unix/gui/uilib.h:
+
+../../../../../src/arch/unix/x11/xaw/uiarch.h:
+
+/usr/include/X11/Intrinsic.h:
+
+/usr/include/X11/Xlib.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigset.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/select2.h:
+
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/X11/X.h:
+
+/usr/include/X11/Xfuncproto.h:
+
+/usr/include/X11/Xosdefs.h:
+
+/usr/include/X11/Xutil.h:
+
+/usr/include/X11/keysym.h:
+
+/usr/include/X11/keysymdef.h:
+
+/usr/include/X11/Xresource.h:
+
+/usr/include/X11/Core.h:
+
+/usr/include/X11/Composite.h:
+
+/usr/include/X11/Constraint.h:
+
+/usr/include/X11/Object.h:
+
+/usr/include/X11/RectObj.h:
+
+/usr/include/X11/StringDefs.h:
+
+../../../../../src/arch/unix/x11/xaw/uitapestatus.h:
+
+../../../../../src/arch/unix/x11/xaw/../x11menu.h:
+
+../../../../../src/arch/unix/gui/uihotkey.h:
+
+../../../../../src/arch/unix/x11/xaw/../xaw/uiarch.h:
+
+../../../../../src/arch/unix/gui/uic64cart.h:
+
+../../../../../src/arch/unix/gui/uicommands.h:
+
+../../../../../src/arch/unix/gui/uidigimax.h:
+
+../../../../../src/arch/unix/gui/uidqbb.h:
+
+../../../../../src/arch/unix/gui/uidrive.h:
+
+../../../../../src/arch/unix/gui/uidrivec64.h:
+
+../../../../../src/arch/unix/gui/uidrivec64c128.h:
+
+../../../../../src/arch/unix/gui/uidrivec64vic20.h:
+
+../../../../../src/arch/unix/gui/uids12c887rtc.h:
+
+../../../../../src/arch/unix/gui/uieasyflash.h:
+
+../../../../../src/arch/unix/gui/uiedit.h:
+
+../../../../../src/arch/unix/gui/uiexpert.h:
+
+../../../../../src/arch/unix/gui/uigeoram.h:
+
+../../../../../src/arch/unix/gui/uiide64.h:
+
+../../../../../src/arch/unix/gui/uiisepic.h:
+
+../../../../../src/arch/unix/gui/uijoystick2.h:
+
+../../../../../src/arch/unix/gui/uikeyboard.h:
+
+../../../../../src/arch/unix/gui/uimagicvoice.h:
+
+../../../../../src/arch/unix/gui/uimidi.h:
+
+../../../../../src/arch/unix/gui/uimmc64.h:
+
+../../../../../src/arch/unix/gui/uimmcreplay.h:
+
+../../../../../src/arch/unix/gui/uimouse.h:
+
+../../../../../src/arch/unix/gui/uinetplay.h:
+
+../../../../../src/arch/unix/gui/uilightpen.h:
+
+../../../../../src/arch/unix/gui/uiperipheraliec.h:
+
+../../../../../src/arch/unix/gui/uiprinteriec.h:
+
+../../../../../src/arch/unix/gui/uiram.h:
+
+../../../../../src/arch/unix/gui/uiramcart.h:
+
+../../../../../src/arch/unix/gui/uiretroreplay.h:
+
+../../../../../src/arch/unix/gui/uireu.h:
+
+../../../../../src/arch/unix/gui/uiromset.h:
+
+../../../../../src/arch/unix/gui/uirs232c64c128.h:
+
+../../../../../src/arch/unix/gui/uiscpu64.h:
+
+../../../../../src/arch/unix/gui/uiscreenshot.h:
+
+../../../../../src/arch/unix/gui/uisettings.h:
+
+../../../../../src/arch/unix/gui/uisid.h:
+
+../../../../../src/arch/unix/gui/uisound.h:
+
+../../../../../src/arch/unix/gui/uisoundexpander.h:
+
+../../../../../src/arch/unix/gui/uitfe.h:
+
+../../../../../src/arch/unix/gui/uitpi.h:
+
+../../../../../src/arch/unix/gui/uivicii.h:
+
+../../../../../src/vsync.h:
+
+../../../../../src/vicii.h:

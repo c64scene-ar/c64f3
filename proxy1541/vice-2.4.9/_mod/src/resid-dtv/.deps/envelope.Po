@@ -1,0 +1,14 @@
+envelope.o: ../../../src/resid-dtv/envelope.cc /usr/include/stdc-predef.h \
+ ../../../src/resid-dtv/envelope.h \
+ ../../../src/resid-dtv/residdtv-config.h siddtvdefs.h \
+ ../../../src/resid-dtv/bittrain.h
+
+/usr/include/stdc-predef.h:
+
+../../../src/resid-dtv/envelope.h:
+
+../../../src/resid-dtv/residdtv-config.h:
+
+siddtvdefs.h:
+
+../../../src/resid-dtv/bittrain.h:

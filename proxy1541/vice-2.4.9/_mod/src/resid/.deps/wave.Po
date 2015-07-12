@@ -1,0 +1,33 @@
+wave.o: ../../../src/resid/wave.cc /usr/include/stdc-predef.h \
+ ../../../src/resid/wave.h ../../../src/resid/resid-config.h siddefs.h \
+ ../../../src/resid/dac.h ../../../src/resid/wave6581__ST.h \
+ ../../../src/resid/wave6581_P_T.h ../../../src/resid/wave6581_PS_.h \
+ ../../../src/resid/wave6581_PST.h ../../../src/resid/wave8580__ST.h \
+ ../../../src/resid/wave8580_P_T.h ../../../src/resid/wave8580_PS_.h \
+ ../../../src/resid/wave8580_PST.h
+
+/usr/include/stdc-predef.h:
+
+../../../src/resid/wave.h:
+
+../../../src/resid/resid-config.h:
+
+siddefs.h:
+
+../../../src/resid/dac.h:
+
+../../../src/resid/wave6581__ST.h:
+
+../../../src/resid/wave6581_P_T.h:
+
+../../../src/resid/wave6581_PS_.h:
+
+../../../src/resid/wave6581_PST.h:
+
+../../../src/resid/wave8580__ST.h:
+
+../../../src/resid/wave8580_P_T.h:
+
+../../../src/resid/wave8580_PS_.h:
+
+../../../src/resid/wave8580_PST.h:

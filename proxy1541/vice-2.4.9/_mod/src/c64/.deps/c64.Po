@@ -1,0 +1,359 @@
+c64.o: ../../../src/c64/c64.c /usr/include/stdc-predef.h \
+ ../../../src/vice.h ../../src/config.h /usr/include/libintl.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/xlocale.h \
+ /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h ../../../src/attach.h \
+ ../../../src/arch/unix/types.h ../../../src/autostart.h \
+ ../../../src/c64/c64-cmdline-options.h ../../../src/c64/c64-resources.h \
+ ../../../src/c64/c64-snapshot.h ../../../src/c64/c64.h \
+ ../../../src/c64/c64_256k.h ../../../src/c64/c64cart.h \
+ ../../../src/c64/cart/expert.h ../../../src/c64/cart/c64cartsystem.h \
+ ../../../src/c64/c64cia.h ../../../src/c64/c64export.h \
+ ../../../src/cartio.h ../../../src/c64/c64fastiec.h \
+ ../../../src/c64/c64gluelogic.h ../../../src/c64/c64iec.h \
+ ../../../src/c64/c64keyboard.h ../../../src/c64/c64mem.h \
+ ../../../src/mem.h ../../../src/c64/c64memrom.h \
+ ../../../src/c64/c64rsuser.h ../../../src/c64ui.h \
+ ../../../src/cartridge.h ../../../src/sound.h ../../../src/vice.h \
+ /usr/include/linux/soundcard.h /usr/include/linux/ioctl.h \
+ /usr/include/x86_64-linux-gnu/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h /usr/include/linux/patchkey.h \
+ /usr/include/x86_64-linux-gnu/sys/soundcard.h ../../../src/cia.h \
+ ../../../src/clkguard.h ../../../src/datasette.h ../../src/debug.h \
+ ../../../src/diskimage.h ../../../src/drive/drive-cmdline-options.h \
+ ../../../src/drive/drive-resources.h ../../../src/drive/drive-sound.h \
+ ../../../src/drive/drive.h ../../../src/rtc/ds1216e.h \
+ ../../../src/lib/p64/p64.h ../../../src/lib/p64/p64config.h \
+ ../../../src/lib.h ../../../src/debug.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string2.h \
+ /usr/include/x86_64-linux-gnu/bits/string3.h \
+ ../../../src/drive/drivecpu.h ../../../src/fliplist.h \
+ ../../../src/fsdevice.h ../../../src/gfxoutput.h \
+ ../../../src/imagecontents.h ../../../src/init.h ../../../src/kbdbuf.h \
+ ../../../src/keyboard.h ../../../src/joystick.h ../../../src/lightpen.h \
+ ../../../src/log.h ../../../src/machine-drive.h \
+ ../../../src/machine-printer.h ../../../src/machine-video.h \
+ ../../../src/machine.h ../../../src/maincpu.h ../../../src/monitor.h \
+ ../../../src/monitor/asm.h ../../../src/network.h \
+ ../../../src/parallel.h ../../../src/c64/patchrom.h \
+ ../../../src/c64/plus256k.h ../../../src/c64/plus60k.h \
+ ../../../src/printer.h ../../../src/c64/psid.h ../../../src/resources.h \
+ ../../../src/rs232drv.h ../../../src/rsuser.h ../../../src/screenshot.h \
+ ../../../src/serial.h ../../../src/sid/sid-cmdline-options.h \
+ ../../../src/sid/sid-resources.h ../../../src/sid/sid.h \
+ ../../../src/sound.h ../../../src/tape.h ../../../src/traps.h \
+ ../../../src/mem.h ../../../src/userport/userport_joystick.h \
+ ../../../src/userport/userport_rtc.h ../../../src/vice-event.h \
+ ../../../src/vicii.h ../../../src/viciisc/vicii-mem.h \
+ ../../../src/video.h ../../../src/video/video-sound.h \
+ ../../../src/viewport.h ../../../src/vsync.h ../../../src/mouse.h
+
+/usr/include/stdc-predef.h:
+
+../../../src/vice.h:
+
+../../src/config.h:
+
+/usr/include/libintl.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigset.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/select2.h:
+
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/alloca.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
+../../../src/attach.h:
+
+../../../src/arch/unix/types.h:
+
+../../../src/autostart.h:
+
+../../../src/c64/c64-cmdline-options.h:
+
+../../../src/c64/c64-resources.h:
+
+../../../src/c64/c64-snapshot.h:
+
+../../../src/c64/c64.h:
+
+../../../src/c64/c64_256k.h:
+
+../../../src/c64/c64cart.h:
+
+../../../src/c64/cart/expert.h:
+
+../../../src/c64/cart/c64cartsystem.h:
+
+../../../src/c64/c64cia.h:
+
+../../../src/c64/c64export.h:
+
+../../../src/cartio.h:
+
+../../../src/c64/c64fastiec.h:
+
+../../../src/c64/c64gluelogic.h:
+
+../../../src/c64/c64iec.h:
+
+../../../src/c64/c64keyboard.h:
+
+../../../src/c64/c64mem.h:
+
+../../../src/mem.h:
+
+../../../src/c64/c64memrom.h:
+
+../../../src/c64/c64rsuser.h:
+
+../../../src/c64ui.h:
+
+../../../src/cartridge.h:
+
+../../../src/sound.h:
+
+../../../src/vice.h:
+
+/usr/include/linux/soundcard.h:
+
+/usr/include/linux/ioctl.h:
+
+/usr/include/x86_64-linux-gnu/asm/ioctl.h:
+
+/usr/include/asm-generic/ioctl.h:
+
+/usr/include/linux/patchkey.h:
+
+/usr/include/x86_64-linux-gnu/sys/soundcard.h:
+
+../../../src/cia.h:
+
+../../../src/clkguard.h:
+
+../../../src/datasette.h:
+
+../../src/debug.h:
+
+../../../src/diskimage.h:
+
+../../../src/drive/drive-cmdline-options.h:
+
+../../../src/drive/drive-resources.h:
+
+../../../src/drive/drive-sound.h:
+
+../../../src/drive/drive.h:
+
+../../../src/rtc/ds1216e.h:
+
+../../../src/lib/p64/p64.h:
+
+../../../src/lib/p64/p64config.h:
+
+../../../src/lib.h:
+
+../../../src/debug.h:
+
+/usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string2.h:
+
+/usr/include/x86_64-linux-gnu/bits/string3.h:
+
+../../../src/drive/drivecpu.h:
+
+../../../src/fliplist.h:
+
+../../../src/fsdevice.h:
+
+../../../src/gfxoutput.h:
+
+../../../src/imagecontents.h:
+
+../../../src/init.h:
+
+../../../src/kbdbuf.h:
+
+../../../src/keyboard.h:
+
+../../../src/joystick.h:
+
+../../../src/lightpen.h:
+
+../../../src/log.h:
+
+../../../src/machine-drive.h:
+
+../../../src/machine-printer.h:
+
+../../../src/machine-video.h:
+
+../../../src/machine.h:
+
+../../../src/maincpu.h:
+
+../../../src/monitor.h:
+
+../../../src/monitor/asm.h:
+
+../../../src/network.h:
+
+../../../src/parallel.h:
+
+../../../src/c64/patchrom.h:
+
+../../../src/c64/plus256k.h:
+
+../../../src/c64/plus60k.h:
+
+../../../src/printer.h:
+
+../../../src/c64/psid.h:
+
+../../../src/resources.h:
+
+../../../src/rs232drv.h:
+
+../../../src/rsuser.h:
+
+../../../src/screenshot.h:
+
+../../../src/serial.h:
+
+../../../src/sid/sid-cmdline-options.h:
+
+../../../src/sid/sid-resources.h:
+
+../../../src/sid/sid.h:
+
+../../../src/sound.h:
+
+../../../src/tape.h:
+
+../../../src/traps.h:
+
+../../../src/mem.h:
+
+../../../src/userport/userport_joystick.h:
+
+../../../src/userport/userport_rtc.h:
+
+../../../src/vice-event.h:
+
+../../../src/vicii.h:
+
+../../../src/viciisc/vicii-mem.h:
+
+../../../src/video.h:
+
+../../../src/video/video-sound.h:
+
+../../../src/viewport.h:
+
+../../../src/vsync.h:
+
+../../../src/mouse.h:

@@ -1,0 +1,4 @@
+cbm2icon.o: ../../../../../src/arch/unix/x11/cbm2icon.c \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

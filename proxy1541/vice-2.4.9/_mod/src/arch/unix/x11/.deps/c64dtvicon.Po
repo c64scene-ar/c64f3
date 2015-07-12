@@ -1,0 +1,4 @@
+c64dtvicon.o: ../../../../../src/arch/unix/x11/c64dtvicon.c \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

@@ -1,0 +1,66 @@
+vicii-cycle.o: ../../../src/viciisc/vicii-cycle.c \
+ /usr/include/stdc-predef.h ../../../src/vice.h ../../src/config.h \
+ /usr/include/libintl.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/xlocale.h \
+ ../../src/debug.h ../../../src/arch/unix/types.h ../../../src/maincpu.h \
+ ../../../src/viciisc/vicii-chip-model.h \
+ ../../../src/viciisc/vicii-cycle.h \
+ ../../../src/viciisc/vicii-draw-cycle.h \
+ ../../../src/viciisc/vicii-fetch.h ../../../src/viciisc/vicii-irq.h \
+ ../../../src/viciisc/vicii-lightpen.h ../../../src/vicii.h \
+ ../../../src/viciisc/viciitypes.h ../../../src/raster/raster.h
+
+/usr/include/stdc-predef.h:
+
+../../../src/vice.h:
+
+../../src/config.h:
+
+/usr/include/libintl.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/xlocale.h:
+
+../../src/debug.h:
+
+../../../src/arch/unix/types.h:
+
+../../../src/maincpu.h:
+
+../../../src/viciisc/vicii-chip-model.h:
+
+../../../src/viciisc/vicii-cycle.h:
+
+../../../src/viciisc/vicii-draw-cycle.h:
+
+../../../src/viciisc/vicii-fetch.h:
+
+../../../src/viciisc/vicii-irq.h:
+
+../../../src/viciisc/vicii-lightpen.h:
+
+../../../src/vicii.h:
+
+../../../src/viciisc/viciitypes.h:
+
+../../../src/raster/raster.h:

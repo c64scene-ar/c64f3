@@ -1,0 +1,196 @@
+c64dtvcpu.o: ../../../src/c64dtv/c64dtvcpu.c /usr/include/stdc-predef.h \
+ ../../../src/vice.h ../../src/config.h /usr/include/libintl.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/xlocale.h \
+ /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h ../../../src/alarm.h \
+ ../../../src/arch/unix/types.h ../../../src/c64/c64mem.h \
+ ../../../src/mem.h ../../../src/c64dtv/c64dtvblitter.h \
+ ../../../src/c64dtv/c64dtvcpu.h ../../../src/c64dtv/c64dtvdma.h \
+ ../../../src/monitor.h ../../../src/monitor/asm.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string2.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap-16.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/string3.h \
+ ../../../src/c64dtv/../maincpu.c ../../../src/c64dtv/../vice.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+ ../../../src/c64dtv/../6510core.h ../../../src/c64dtv/../alarm.h \
+ ../../../src/c64dtv/../clkguard.h ../../../src/c64dtv/../debug.h \
+ ../../../src/c64dtv/../interrupt.h ../../../src/c64dtv/../log.h \
+ ../../../src/c64dtv/../machine.h ../../../src/c64dtv/../maincpu.h \
+ ../../../src/c64dtv/../mem.h ../../../src/c64dtv/../monitor.h \
+ ../../../src/c64dtv/../mos6510dtv.h ../../../src/c64dtv/../h6809regs.h \
+ ../../../src/c64dtv/../snapshot.h ../../../src/c64dtv/../traps.h \
+ ../../../src/c64dtv/../6510core.c
+
+/usr/include/stdc-predef.h:
+
+../../../src/vice.h:
+
+../../src/config.h:
+
+/usr/include/libintl.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+../../../src/alarm.h:
+
+../../../src/arch/unix/types.h:
+
+../../../src/c64/c64mem.h:
+
+../../../src/mem.h:
+
+../../../src/c64dtv/c64dtvblitter.h:
+
+../../../src/c64dtv/c64dtvcpu.h:
+
+../../../src/c64dtv/c64dtvdma.h:
+
+../../../src/monitor.h:
+
+../../../src/monitor/asm.h:
+
+/usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string2.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/string3.h:
+
+../../../src/c64dtv/../maincpu.c:
+
+../../../src/c64dtv/../vice.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigset.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/select2.h:
+
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/alloca.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
+../../../src/c64dtv/../6510core.h:
+
+../../../src/c64dtv/../alarm.h:
+
+../../../src/c64dtv/../clkguard.h:
+
+../../../src/c64dtv/../debug.h:
+
+../../../src/c64dtv/../interrupt.h:
+
+../../../src/c64dtv/../log.h:
+
+../../../src/c64dtv/../machine.h:
+
+../../../src/c64dtv/../maincpu.h:
+
+../../../src/c64dtv/../mem.h:
+
+../../../src/c64dtv/../monitor.h:
+
+../../../src/c64dtv/../mos6510dtv.h:
+
+../../../src/c64dtv/../h6809regs.h:
+
+../../../src/c64dtv/../snapshot.h:
+
+../../../src/c64dtv/../traps.h:
+
+../../../src/c64dtv/../6510core.c:

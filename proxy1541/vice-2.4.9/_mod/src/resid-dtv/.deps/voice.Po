@@ -1,0 +1,18 @@
+voice.o: ../../../src/resid-dtv/voice.cc /usr/include/stdc-predef.h \
+ ../../../src/resid-dtv/voice.h ../../../src/resid-dtv/residdtv-config.h \
+ siddtvdefs.h ../../../src/resid-dtv/wave.h \
+ ../../../src/resid-dtv/bittrain.h ../../../src/resid-dtv/envelope.h
+
+/usr/include/stdc-predef.h:
+
+../../../src/resid-dtv/voice.h:
+
+../../../src/resid-dtv/residdtv-config.h:
+
+siddtvdefs.h:
+
+../../../src/resid-dtv/wave.h:
+
+../../../src/resid-dtv/bittrain.h:
+
+../../../src/resid-dtv/envelope.h:

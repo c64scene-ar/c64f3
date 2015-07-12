@@ -1,0 +1,102 @@
+vicii-draw.o: ../../../src/vicii/vicii-draw.c /usr/include/stdc-predef.h \
+ ../../../src/vice.h ../../src/config.h /usr/include/libintl.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/xlocale.h \
+ /usr/include/string.h /usr/include/x86_64-linux-gnu/bits/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string2.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap-16.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/string3.h \
+ ../../../src/raster/raster-cache-fill.h ../../../src/arch/unix/types.h \
+ ../../../src/raster/raster-cache-fill-1fff.h \
+ ../../../src/raster/raster-cache-fill-39ff.h \
+ ../../../src/raster/raster-cache-text-ext.h \
+ ../../../src/raster/raster-cache-text-std.h \
+ ../../../src/raster/raster-cache.h \
+ ../../../src/raster/raster-sprite-cache.h \
+ ../../../src/raster/raster-modes.h ../../../src/raster/raster-cache.h \
+ ../../../src/raster/raster.h ../../../src/vicii/vicii-draw.h \
+ ../../../src/vicii/viciitypes.h ../../../src/viewport.h
+
+/usr/include/stdc-predef.h:
+
+../../../src/vice.h:
+
+../../src/config.h:
+
+/usr/include/libintl.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string2.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/string3.h:
+
+../../../src/raster/raster-cache-fill.h:
+
+../../../src/arch/unix/types.h:
+
+../../../src/raster/raster-cache-fill-1fff.h:
+
+../../../src/raster/raster-cache-fill-39ff.h:
+
+../../../src/raster/raster-cache-text-ext.h:
+
+../../../src/raster/raster-cache-text-std.h:
+
+../../../src/raster/raster-cache.h:
+
+../../../src/raster/raster-sprite-cache.h:
+
+../../../src/raster/raster-modes.h:
+
+../../../src/raster/raster-cache.h:
+
+../../../src/raster/raster.h:
+
+../../../src/vicii/vicii-draw.h:
+
+../../../src/vicii/viciitypes.h:
+
+../../../src/viewport.h:

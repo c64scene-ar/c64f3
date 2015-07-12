@@ -1,0 +1,50 @@
+viciidtv-color.o: ../../../src/vicii/viciidtv-color.c \
+ /usr/include/stdc-predef.h ../../../src/vice.h ../../src/config.h \
+ /usr/include/libintl.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/xlocale.h \
+ ../../../src/vicii/viciitypes.h ../../../src/raster/raster.h \
+ ../../../src/arch/unix/types.h ../../../src/vicii/vicii-color.h \
+ ../../../src/vicii/vicii-resources.h ../../../src/video.h
+
+/usr/include/stdc-predef.h:
+
+../../../src/vice.h:
+
+../../src/config.h:
+
+/usr/include/libintl.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/xlocale.h:
+
+../../../src/vicii/viciitypes.h:
+
+../../../src/raster/raster.h:
+
+../../../src/arch/unix/types.h:
+
+../../../src/vicii/vicii-color.h:
+
+../../../src/vicii/vicii-resources.h:
+
+../../../src/video.h:

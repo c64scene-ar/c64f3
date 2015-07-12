@@ -1,0 +1,102 @@
+video-render.o: ../../../src/video/video-render.c \
+ /usr/include/stdc-predef.h ../../../src/vice.h ../../src/config.h \
+ /usr/include/libintl.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/xlocale.h \
+ /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h ../../../src/log.h \
+ ../../../src/video/render1x1.h ../../../src/arch/unix/types.h \
+ ../../../src/video.h ../../../src/video/render1x1pal.h \
+ ../../../src/video/render1x1ntsc.h ../../../src/video/render1x2crt.h \
+ ../../../src/viewport.h ../../../src/video/render2x2crt.h \
+ ../../../src/video/render2x2ntsc.h ../../../src/video/render2x2pal.h \
+ ../../../src/video/render2x4crt.h ../../../src/video/renderyuv.h \
+ ../../../src/video/video-render.h ../../../src/video/video-sound.h
+
+/usr/include/stdc-predef.h:
+
+../../../src/vice.h:
+
+../../src/config.h:
+
+/usr/include/libintl.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+../../../src/log.h:
+
+../../../src/video/render1x1.h:
+
+../../../src/arch/unix/types.h:
+
+../../../src/video.h:
+
+../../../src/video/render1x1pal.h:
+
+../../../src/video/render1x1ntsc.h:
+
+../../../src/video/render1x2crt.h:
+
+../../../src/viewport.h:
+
+../../../src/video/render2x2crt.h:
+
+../../../src/video/render2x2ntsc.h:
+
+../../../src/video/render2x2pal.h:
+
+../../../src/video/render2x4crt.h:
+
+../../../src/video/renderyuv.h:
+
+../../../src/video/video-render.h:
+
+../../../src/video/video-sound.h:

@@ -1,0 +1,10 @@
+pot.o: ../../../src/resid/pot.cc /usr/include/stdc-predef.h \
+ ../../../src/resid/pot.h ../../../src/resid/resid-config.h siddefs.h
+
+/usr/include/stdc-predef.h:
+
+../../../src/resid/pot.h:
+
+../../../src/resid/resid-config.h:
+
+siddefs.h:

@@ -1,0 +1,8 @@
+version.o: ../../../src/resid/version.cc /usr/include/stdc-predef.h \
+ ../../../src/resid/resid-config.h siddefs.h
+
+/usr/include/stdc-predef.h:
+
+../../../src/resid/resid-config.h:
+
+siddefs.h:
