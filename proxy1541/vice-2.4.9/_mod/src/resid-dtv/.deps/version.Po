@@ -1,8 +1,0 @@
-version.o: ../../../src/resid-dtv/version.cc /usr/include/stdc-predef.h \
- ../../../src/resid-dtv/residdtv-config.h siddtvdefs.h
-
-/usr/include/stdc-predef.h:
-
-../../../src/resid-dtv/residdtv-config.h:
-
-siddtvdefs.h:

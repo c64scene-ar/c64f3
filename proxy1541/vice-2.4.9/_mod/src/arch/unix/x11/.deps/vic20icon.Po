@@ -1,4 +1,0 @@
-vic20icon.o: ../../../../../src/arch/unix/x11/vic20icon.c \
- /usr/include/stdc-predef.h
-
-/usr/include/stdc-predef.h:

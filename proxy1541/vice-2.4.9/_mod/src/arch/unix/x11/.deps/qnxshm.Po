@@ -1,4 +1,0 @@
-qnxshm.o: ../../../../../src/arch/unix/x11/qnxshm.c \
- /usr/include/stdc-predef.h
-
-/usr/include/stdc-predef.h:

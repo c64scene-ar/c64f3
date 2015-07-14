@@ -43,7 +43,8 @@ SUBDIRS = \
 	cbm2 \
 	arch \
 	lib/p64 \
-	platform
+	platform \
+	prox1541
 
 DIST_SUBDIRS = \
 	sounddrv \
@@ -83,7 +84,8 @@ DIST_SUBDIRS = \
 	resid \
 	resid-dtv \
 	lib \
-	platform
+	platform \
+    prox1541
 
 AM_CPPFLAGS = \
 	@ARCH_INCLUDES@ \
@@ -100,7 +102,9 @@ AM_CPPFLAGS = \
 	-I$(top_srcdir)/src/userport \
 	-I$(top_srcdir)/src/lib/p64 \
 	-I$(top_srcdir)/src/platform \
-	-I$(top_srcdir)/src/rtc
+	-I$(top_srcdir)/src/rtc \
+    -I$(top_srcdir)/src/prox1541
+
 
 noinst_HEADERS = \
 	6510core.h \
@@ -751,6 +755,7 @@ plus4_default_vpl.h: $(EMBEDDED_DEPENDS)
 vic20_default_vpl.h: $(EMBEDDED_DEPENDS)
 	$(SHELL) $(srcdir)/palette2c.sh <$(top_srcdir)/data/VIC20/default.vpl vic20_default_vpl.h "unsigned char vic20_default_vpl[]"
 
+prox1541_lib = $(top_builddir)/src/prox1541/libprox1541.a
 c128_lib = $(top_builddir)/src/c128/libc128.a
 c64_lib = $(top_builddir)/src/c64/libc64.a
 c64sc_lib = $(top_builddir)/src/c64/libc64sc.a
@@ -881,7 +886,8 @@ else
 OW_progs =
 endif
 
-bin_PROGRAMS = vsid x64 $(x64sc_bin) x128 $(x64dtv_bin) xvic xpet xplus4 xcbm2 xcbm5x0 $(xscpu64_bin) $(c1541) $(petcat) $(cartconv) $(OW_progs) p1541
+#bin_PROGRAMS = vsid x64 $(x64sc_bin) x128 $(x64dtv_bin) xvic xpet xplus4 xcbm2 xcbm5x0 $(xscpu64_bin) $(c1541) $(petcat) $(cartconv) $(OW_progs) x1541
+bin_PROGRAMS = x1541
 
 EXTRA_PROGRAMS =
 
@@ -1026,6 +1032,80 @@ x64sc_libs =  \
 	$(imagecontents_lib) \
 	$(resid_libs) \
 	$(platform_lib)
+
+#################################################################################
+#
+# x1541
+#
+#################################################################################
+x1541_SOURCES = \
+	cbmdos.c \
+	charset.c \
+	findpath.c \
+	gcr.c \
+	cbmimage.c \
+	info.c \
+	ioutil.c \
+	lib.c \
+	log.c \
+	rawfile.c \
+	resources.c \
+	util.c \
+	zfile.c \
+	zipcode.c 
+
+if OWCC
+ARCH_EXTRA_OBJECTS = @ARCH_DIR@/libarch.a
+else
+ARCH_EXTRA_OBJECTS = 	@ARCH_DIR@/archdep.o
+endif
+
+# FIXME: I don't like linking `archdep.o' this way, but we cannot use
+# the generic `ARCH_LIBS', because we would have to link against X11
+# libs too then.
+x1541_LDADD = \
+	$(ARCH_EXTRA_OBJECTS) \
+	$(prox1541_lib) \
+	$(p64_lib) \
+	$(blockdev_lib) \
+	$(realdevice_lib) \
+	$(vdrive_lib) \
+	$(imagecontents_lib) \
+	$(fileio_lib) \
+	$(diskimage_lib) \
+	$(tape_lib) \
+	$(serial_lib) \
+	$(platform_lib) \
+	$(drive_lib) \
+	@INTLLIBS@ @SDL_EXTRA_LIBS@ \
+	@READLINE@ @READLINE_LIBS@ \
+	@ZLIB_LIBS@ @DYNLIB_LIBS@
+
+x1541_DEPENDENCIES = $(prox1541_libs)
+x1541_LDFLAGS = @x1541_LDFLAGS@
+
+.PHONY: x1541-all
+x1541-all: \
+	$(BUILT_SOURCES) \
+	libprox1541 \
+	libarch \
+	libp64 \
+	libvdrive \
+	libdiskimage \
+	libserial \
+	libtape \
+	libimagecontents \
+	libfileio \
+	libplatform \
+    libdrive \
+	x1541$(EXEEXT)
+
+#################################################################################
+#
+# End of x1541
+#
+#################################################################################
+
 
 x64sc_SOURCES = $(base_sources) $(mouse_sources) $(midi_sources)
 x64sc_LDADD = $(x64sc_libs) $(emu_extlibs) @TFE_LIBS@ @NETPLAY_LIBS@ @READLINE_LIBS@
@@ -1667,75 +1747,6 @@ c1541-all: \
 	libfileio \
 	libplatform \
 	c1541$(EXEEXT)
-
-#################################################################################
-#
-# p1541
-#
-#################################################################################
-p1541_SOURCES = \
-	p1541.c \
-	cbmdos.c \
-	charset.c \
-	findpath.c \
-	gcr.c \
-	cbmimage.c \
-	info.c \
-	ioutil.c \
-	lib.c \
-	log.c \
-	rawfile.c \
-	resources.c \
-	util.c \
-	zfile.c \
-	zipcode.c 
-
-if OWCC
-ARCH_EXTRA_OBJECTS = @ARCH_DIR@/libarch.a
-else
-ARCH_EXTRA_OBJECTS = 	@ARCH_DIR@/archdep.o
-endif
-
-# FIXME: I don't like linking `archdep.o' this way, but we cannot use
-# the generic `ARCH_LIBS', because we would have to link against X11
-# libs too then.
-p1541_LDADD = \
-	$(ARCH_EXTRA_OBJECTS) \
-	$(p64_lib) \
-	$(blockdev_lib) \
-	$(realdevice_lib) \
-	$(vdrive_lib) \
-	$(imagecontents_lib) \
-	$(fileio_lib) \
-	$(diskimage_lib) \
-	$(tape_lib) \
-	$(serial_lib) \
-	$(platform_lib) \
-	$(drive_lib) \
-	@INTLLIBS@ @SDL_EXTRA_LIBS@ \
-	@READLINE@ @READLINE_LIBS@ \
-	@ZLIB_LIBS@ @DYNLIB_LIBS@
-
-.PHONY: p1541-all
-p1541-all: \
-	$(BUILT_SOURCES) \
-	libarch \
-	libp64 \
-	libvdrive \
-	libdiskimage \
-	libserial \
-	libtape \
-	libimagecontents \
-	libfileio \
-	libplatform \
-    libdrive \
-	p1541$(EXEEXT)
-
-#################################################################################
-#
-# End of p1541
-#
-#################################################################################
 
 # petcat
 petcat_SOURCES = \
