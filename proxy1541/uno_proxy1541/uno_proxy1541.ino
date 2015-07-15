@@ -11,26 +11,21 @@ int clk_button = 4;  // BLACK
 
 int atn_state, data_state, clk_state;
 
-int debug = 0;
+int debug = 1;
+int prev_state = 0xFFFF,
+    cur_state;
 
 void waitForPeer(void)
 {
   //Console.begin();
   Serial.begin(115200);
   while (! Serial); // Wait until Serial is ready - Leonardo
-
-  //printf("waiting...\n");
 }
 
 void setup() {
   // Now we're ready to wait for the PI to respond to our connection attempts.
   // initial connection handling.
   waitForPeer();
-  
-  pinMode(atn_button, INPUT);
-  pinMode(clk_button, INPUT);
-  pinMode(data_button, INPUT);
-  
 }
 
 void loop() {
@@ -38,6 +33,10 @@ void loop() {
   // First stage: PC -> C64
   //
   if (Serial.available() > 0) {
+    pinMode(atn_button, OUTPUT);
+    pinMode(clk_button, OUTPUT);
+    pinMode(data_button, OUTPUT);
+  
     iToC64 = Serial.read();
     
     if (debug) {
@@ -49,20 +48,42 @@ void loop() {
   //
   // Second stage: C64 -> PC
   //
+  pinMode(atn_button, INPUT);
+  pinMode(clk_button, INPUT);
+  pinMode(data_button, INPUT);
+  
   atn_state = digitalRead(atn_button);
   data_state = digitalRead(data_button);
   clk_state = digitalRead(clk_button);
   
-  if (debug) {
-    snprintf(format, sizeof(format), ">>> ATN : %d - CLK : %d - DATA : %d", atn_state, clk_state, data_state);
-    Serial.println(format);
+  cur_state = (data_state << 2) | (clk_state << 1) | atn_state;
     
-    if ((atn_state | data_state | clk_state) == 1) {
-      Serial.println("Gotcha.....");
-      //delay(1000);
+  if (debug) {
+    if (prev_state != cur_state) {
+      
+      prev_state = cur_state;
+      
+      snprintf(format, sizeof(format), ">>> ATN : %d - CLK : %d - DATA : %d", atn_state, clk_state, data_state);
+      Serial.println(format);
+    
+      //if ((atn_state | data_state | clk_state) == 1) {
+      //  Serial.println("Gotcha.....");
+      //  delay(1000);
+      //}
     }
   }
   else {
-    Serial.write(data_state << 2) | (clk_state << 1) | atn_state;
+    Serial.write(cur_state);
   }
+
+  /*
+  for (int i = 0; i < 20; i++) {
+    Serial.println("high");
+    digitalWrite(data_button, HIGH);
+    delay(2000);
+    Serial.println("low");
+    digitalWrite(data_button, LOW);
+    delay(2000);
+  }
+  */
 }

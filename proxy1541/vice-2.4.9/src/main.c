@@ -257,8 +257,8 @@ int main_program(int argc, char **argv)
 
     /* Let's go...  */
     log_message(LOG_DEFAULT, "Main CPU: starting at ($FFFC).");
-    //maincpu_mainloop();
-	main_iec_loop();
+    maincpu_mainloop();
+	//main_iec_loop();
     log_error(LOG_DEFAULT, "perkele!");
 
     return 0;

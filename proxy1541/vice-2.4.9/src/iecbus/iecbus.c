@@ -546,26 +546,28 @@ int iecbus_device_write(unsigned int unit, BYTE data)
 #include <termios.h> /* POSIX terminal control definitions */
 
 int iec_proxy_main_loop(void) {
-	int devnr = 8;
+	int dev_num = 8;
 	int enable;
 	CLOCK clk_value = 0;
-	
-	int fd = open("/dev/ttyACM0", O_RDONLY | O_NOCTTY);
-    
-	if (fd == -1)
-    {
-        /* Could not open the port. */
-        perror("open_port: Unable to open /dev/ttyACM0 - ");
-    }
-	else
-		fcntl(fd, F_SETFL, 0);
-	
-	char buffer[32];
-    int n = read(fd, buffer, sizeof(buffer));
-	
-	n = write(fd, "ATZ\r", 4);
-	if (n < 0)
-		fputs("write() of 4 bytes failed!\n", stderr);
+	char* dev_name = "/dev/ttyACM0";
+	int input,
+		output,
+		fd;
+	BYTE bus_data;
+	    
+	while (1) {
+		fd = open(dev_name, O_RDONLY | O_NOCTTY);
+		
+		if (fd == -1) {
+			/* Could not open the port. */
+			log_error("iec_proxy_main_loop: Unable to open %s", dev_name);
+			sleep(2); // wait for 2 seconds until retry.
+		}
+		else {
+			fcntl(fd, F_SETFL, 0);
+			break;
+		}
+	}
 	
 	while (++clk_value) {
 		//enable = clk_value;
@@ -574,16 +576,43 @@ int iec_proxy_main_loop(void) {
 		IECBUS_DEVICE_READ_DATA  = 0x01,
 		IECBUS_DEVICE_READ_CLK   = 0x04,
 		IECBUS_DEVICE_READ_ATN   = 0x80,
-		*/
-		// Fetch from USB and update local bus.
-		iec_drive_write(IECBUS_DEVICE_READ_ATN, devnr);
+		*/		
+		if (read(fd, &input, 1) != 1) {
+			log_debug("iec_proxy_main_loop: Unable to read data.");
+			continue;
+		}
+		int data_state = (input >> 2) & 1;
+		int clk_state  = (input >> 1) & 1;
+		int atn_state  = input & 1;
 		
+		log_debug("<<< ATN : %d - CLK : %d - DATA : %d", atn_state, clk_state, data_state);
+		//
+		// Fetch from USB and update local bus.
+		//
+		//iec_drive_write(IECBUS_DEVICE_READ_ATN, dev_num);
+		bus_data = 0;
+		if (data_state == 1)
+			bus_data |= IECBUS_DEVICE_READ_DATA;
+		if (clk_state == 1)
+			bus_data |= IECBUS_DEVICE_READ_CLK;
+		if (atn_state == 1)
+			bus_data |= IECBUS_DEVICE_READ_ATN;
+		
+		iecbus_device_write(dev_num, bus_data);
+		
+		//
 		// Perform IEC processing loop.
+		//
 		serial_iec_device_exec(clk_value);
 		
-		// Dump newly processed values from the local bus to the USB.
+		// Get the new values from the local bus and write them to the USB.
 		//iecbus_device_write(devnr, (BYTE)(IECBUS_DEVICE_WRITE_CLK | IECBUS_DEVICE_WRITE_DATA));
-		usleep(1000000);
+		bus_data = 7;
+		if (write(fd, (char*)&bus_data, sizeof(bus_data)) < 0) {
+			log_debug("iec_proxy_main_loop: Unable to write data.");
+		}
+		
+		usleep(500000);
 	}
 	return 0;
 }

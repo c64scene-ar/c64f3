@@ -9,7 +9,7 @@ C64 FDD For Fun
 2. Firmware
 3. Information.
 4. Serial Bus information
-5. C64 DIN-6 board (rear) connection
+5. C64 IEC DIN-6 Female connector
 
 ### C64 Serial Bus Information
 
@@ -201,13 +201,13 @@ C64 FDD For Fun
 4.  Tv and Tpr minimum must be 60us for external device to be a talker.
 5.  Tei minimum must be 80us for external device to be a listener.
 
-### 5. DIN-6 board connection
+### 5. Female DIN-6 IEC connection
 
 ```
-    Rear view of the C64 connector
+    Rear view of the C64 connector (female connector)
 
-                  _____     < YELLOW > 
-    (SRQ) ----- /       \ ---- DATA
+  < BROWN >       _____     < YELLOW > 
+    (DATA) ----- /       \ ---- SRQ
                / O     O \
               |           |
          N/C--|---> O     |
