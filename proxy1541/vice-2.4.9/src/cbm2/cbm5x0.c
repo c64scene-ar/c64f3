@@ -2,7 +2,7 @@
  * cbm5x0.c
  *
  * Written by
- *  André Fachat <fachat@physik.tu-chemnitz.de>
+ *  Andr Fachat <fachat@physik.tu-chemnitz.de>
  *  Andreas Boose <viceteam@t-online.de>
  *
  * This file is part of VICE, the Versatile Commodore Emulator.
@@ -456,6 +456,8 @@ void machine_setup_context(void)
     tpi2_setup_context(&machine_context);
     machine_printer_setup_context(&machine_context);
 }
+
+int machine_specific_init_iec_proxy(void) {return 0;}
 
 /* CBM-II-specific initialization.  */
 int machine_specific_init(void)

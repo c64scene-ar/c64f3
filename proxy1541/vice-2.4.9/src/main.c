@@ -86,6 +86,10 @@ int console_mode = 0;
 int video_disabled_mode = 0;
 static int init_done;
 
+// ***************************************** Proxy C1541
+//#include "iecbus.h"
+// *****************************************************
+
 /* ------------------------------------------------------------------------- */
 
 /* This is the main program entry point.  Call this from `main()'.  */
@@ -253,8 +257,8 @@ int main_program(int argc, char **argv)
 
     /* Let's go...  */
     log_message(LOG_DEFAULT, "Main CPU: starting at ($FFFC).");
-    maincpu_mainloop();
-
+    //maincpu_mainloop();
+	main_iec_loop();
     log_error(LOG_DEFAULT, "perkele!");
 
     return 0;

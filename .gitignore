@@ -1,4 +1,5 @@
 *.swp
-*/_mod/*
+*/vice-2.4.9/_mod/*
+*.udb
 *.o
 *.a

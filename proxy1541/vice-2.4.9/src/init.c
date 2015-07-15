@@ -194,6 +194,9 @@ int init_cmdline_options(void)
 #endif
     return 0;
 }
+int main_iec_loop(void) {
+	machine_init_iec_proxy();
+}
 
 int init_main(void)
 {

@@ -209,6 +209,10 @@ void machine_early_init(void)
                            machine_maincpu_clk_overflow_callback, NULL);
 }
 
+int machine_init_iec_proxy(void) {
+	return machine_specific_init_iec_proxy();
+}
+
 int machine_init(void)
 {
     machine_init_was_called = 1;

@@ -531,6 +531,8 @@ void machine_setup_context(void)
     machine_printer_setup_context(&machine_context);
 }
 
+int machine_specific_init_iec_proxy(void) {return 0;}
+
 /* Plus4-specific initialization.  */
 int machine_specific_init(void)
 {

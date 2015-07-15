@@ -537,3 +537,53 @@ int iecbus_device_write(unsigned int unit, BYTE data)
         return 0;
     }
 }
+
+#include <stdio.h>   /* Standard input/output definitions */
+#include <string.h>  /* String function definitions */
+#include <unistd.h>  /* UNIX standard function definitions */
+#include <fcntl.h>   /* File control definitions */
+#include <errno.h>   /* Error number definitions */
+#include <termios.h> /* POSIX terminal control definitions */
+
+int iec_proxy_main_loop(void) {
+	int devnr = 8;
+	int enable;
+	CLOCK clk_value = 0;
+	
+	int fd = open("/dev/ttyACM0", O_RDONLY | O_NOCTTY);
+    
+	if (fd == -1)
+    {
+        /* Could not open the port. */
+        perror("open_port: Unable to open /dev/ttyACM0 - ");
+    }
+	else
+		fcntl(fd, F_SETFL, 0);
+	
+	char buffer[32];
+    int n = read(fd, buffer, sizeof(buffer));
+	
+	n = write(fd, "ATZ\r", 4);
+	if (n < 0)
+		fputs("write() of 4 bytes failed!\n", stderr);
+	
+	while (++clk_value) {
+		//enable = clk_value;
+		//iecbus_status_set(IECBUS_STATUS_DRIVETYPE, devnr, enable);
+		/*
+		IECBUS_DEVICE_READ_DATA  = 0x01,
+		IECBUS_DEVICE_READ_CLK   = 0x04,
+		IECBUS_DEVICE_READ_ATN   = 0x80,
+		*/
+		// Fetch from USB and update local bus.
+		iec_drive_write(IECBUS_DEVICE_READ_ATN, devnr);
+		
+		// Perform IEC processing loop.
+		serial_iec_device_exec(clk_value);
+		
+		// Dump newly processed values from the local bus to the USB.
+		//iecbus_device_write(devnr, (BYTE)(IECBUS_DEVICE_WRITE_CLK | IECBUS_DEVICE_WRITE_DATA));
+		usleep(1000000);
+	}
+	return 0;
+}

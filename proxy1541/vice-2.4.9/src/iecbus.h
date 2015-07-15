@@ -101,4 +101,6 @@ extern BYTE iecbus_device_read(void);
 extern int  iecbus_device_write(unsigned int unit, BYTE data);
 extern void (*iecbus_update_ports)(void);
 
+extern int iec_proxy_main_loop(void);
+
 #endif

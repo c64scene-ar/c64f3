@@ -34,6 +34,7 @@ struct vdrive_s;
 
 extern void machine_bus_init(void);
 extern void machine_bus_init_machine(void);
+//extern void machine_specific_iec_proxy_main_loop(void);
 
 extern int machine_bus_lib_directory(unsigned int unit, const char *pattern,
                                      BYTE **buf);

@@ -192,7 +192,7 @@ int serial_iec_device_cmdline_options_init(void)
 
 /*------------------------------------------------------------------------*/
 
-#define IEC_DEVICE_DEBUG 0
+#define IEC_DEVICE_DEBUG 5
 
 /* Logging goes here.  */
 #if IEC_DEVICE_DEBUG > 0

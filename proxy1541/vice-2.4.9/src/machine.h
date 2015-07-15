@@ -94,6 +94,8 @@ extern int machine_cmdline_options_init(void);
 extern void machine_setup_context(void);
 extern int machine_init(void);
 extern int machine_specific_init(void);
+extern int machine_init_iec_proxy(void);
+extern int machine_specific_init_iec_proxy(void);
 extern void machine_early_init(void);
 
 /* Initialize the main CPU of the machine.  */

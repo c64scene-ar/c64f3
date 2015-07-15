@@ -11,6 +11,8 @@ int clk_button = 4;  // BLACK
 
 int atn_state, data_state, clk_state;
 
+int debug = 0;
+
 void waitForPeer(void)
 {
   //Console.begin();
@@ -38,9 +40,10 @@ void loop() {
   if (Serial.available() > 0) {
     iToC64 = Serial.read();
     
-    snprintf(format, sizeof(format), "<<< ATN : %d - CLK : %d - DATA : %d\r", (iToC64 & 1), ((iToC64 >> 1) & 1), ((iToC64 >> 2) & 1));
-    
-    Serial.print(format);
+    if (debug) {
+      snprintf(format, sizeof(format), "<<< ATN : %d - CLK : %d - DATA : %d\r", (iToC64 & 1), ((iToC64 >> 1) & 1), ((iToC64 >> 2) & 1));
+      Serial.print(format);
+    }
   }
   
   //
@@ -50,7 +53,7 @@ void loop() {
   data_state = digitalRead(data_button);
   clk_state = digitalRead(clk_button);
   
-  if (0) {
+  if (debug) {
     snprintf(format, sizeof(format), ">>> ATN : %d - CLK : %d - DATA : %d", atn_state, clk_state, data_state);
     Serial.println(format);
     

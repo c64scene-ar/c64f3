@@ -562,6 +562,8 @@ void machine_handle_pending_alarms(int num_write_cycles)
 {
 }
 
+int machine_specific_init_iec_proxy(void) {return 0;}
+
 /* VIC20-specific initialization.  */
 int machine_specific_init(void)
 {
