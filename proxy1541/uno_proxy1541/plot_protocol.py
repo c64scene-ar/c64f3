@@ -15,22 +15,28 @@ def main(capture_dev):
     #y = [[((k>>2) & 1), ((k >> 1) & 1), (k & 1)] for k in fd.read()]
     y = []
     i = 0
+    prev_bus_data = 0xff
+
     while True:#for i in xrange(2000):
-        stdout.write("\r[+] Sample %09d " % i)
+        #stdout.write("\r[+] Sample %09d " % i)
         ch = serial.read(1)
         if ch == "":
             #print "nada @ %d        " % i
             continue
         #y.append(ord(ch))
 
-        packed = ord(ch)
-        data = (packed >> 2) & 1
-        clk = (packed >> 1) & 1
-        atn = packed & 1
-        stdout.write("-> D:%d - C:%d - A:%d" % (data, clk, atn))
+        bus_data = ord(ch)
+        data = (bus_data >> 2) & 1
+        clk = (bus_data >> 1) & 1
+        atn = bus_data & 1
+
+        if prev_bus_data != bus_data:
+            prev_bus_data = bus_data
+            stdout.write("-> ATN:%d - CLK:%d - DATA:%d\n" % (atn, clk, data))
+
         #if (data | clk | atn) == 1:
-        if clk == 0:
-            break
+        #if clk == 0:
+        #    break
         i += 1
 
 
@@ -50,4 +56,7 @@ if __name__ == "__main__":
     if len(argv) != 2:
         print "Usage:\n\n    %s <capture_device>\n" % argv[0]
     else:
-        main(argv[1])
+        try:
+            main(argv[1])
+        except KeyboardInterrupt, err:
+            pass

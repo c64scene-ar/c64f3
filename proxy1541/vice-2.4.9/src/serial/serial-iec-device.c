@@ -368,6 +368,7 @@ enum {
     P_ATN       = 0x80
 };
 
+int prev_bus = 0;
 
 static void serial_iec_device_exec_main(unsigned int devnr, CLOCK clk_value)
 {
@@ -378,12 +379,15 @@ static void serial_iec_device_exec_main(unsigned int devnr, CLOCK clk_value)
     bus = iecbus_device_read();
 
 #if IEC_DEVICE_DEBUG > 4
-    log_message(serial_iec_device_log,
+	if (prev_bus != bus) {
+		log_message(serial_iec_device_log,
                 "serial_iec_device_exec_main(%u, %u) F=%i, S=%i, ATN=%i CLK=%i DTA=%i",
                 devnr, clk_value, iec->flags, iec->state,
                 (bus & IECBUS_DEVICE_READ_ATN) ? 1 : 0,
                 (bus & IECBUS_DEVICE_READ_CLK) ? 1 : 0,
                 (bus & IECBUS_DEVICE_READ_DATA) ? 1 : 0);
+		prev_bus = bus;
+	}
 #endif
 
     if (!(iec->flags & P_ATN) && !(bus & IECBUS_DEVICE_READ_ATN)) {

@@ -6,12 +6,12 @@ char format[100];
 
 // digital pin 2 has a pushbutton attached to it. Give it a name:
 int atn_button = 2;  // BLUE
-int data_button = 3; // YELLOW
+int data_button = 3; // BROWN
 int clk_button = 4;  // BLACK
 
 int atn_state, data_state, clk_state;
 
-int debug = 1;
+int debug = 0;
 int prev_state = 0xFFFF,
     cur_state;
 
@@ -38,9 +38,18 @@ void loop() {
     pinMode(data_button, OUTPUT);
   
     iToC64 = Serial.read();
+        
+    data_state = (iToC64 >> 2) & 1;
+    digitalWrite(data_button, data_state);
+    
+    clk_state = (iToC64 >> 1) & 1;
+    digitalWrite(clk_button, clk_state);
+  
+    atn_state = iToC64 & 1;
+    digitalWrite(atn_button, atn_state);
     
     if (debug) {
-      snprintf(format, sizeof(format), "<<< ATN : %d - CLK : %d - DATA : %d\r", (iToC64 & 1), ((iToC64 >> 1) & 1), ((iToC64 >> 2) & 1));
+      snprintf(format, sizeof(format), "<<< ATN : %d - CLK : %d - DATA : %d\r", atn_state, clk_state, data_state);
       Serial.print(format);
     }
   }
@@ -52,9 +61,9 @@ void loop() {
   pinMode(clk_button, INPUT);
   pinMode(data_button, INPUT);
   
-  atn_state = digitalRead(atn_button);
   data_state = digitalRead(data_button);
   clk_state = digitalRead(clk_button);
+  atn_state = digitalRead(atn_button);
   
   cur_state = (data_state << 2) | (clk_state << 1) | atn_state;
     
@@ -75,15 +84,4 @@ void loop() {
   else {
     Serial.write(cur_state);
   }
-
-  /*
-  for (int i = 0; i < 20; i++) {
-    Serial.println("high");
-    digitalWrite(data_button, HIGH);
-    delay(2000);
-    Serial.println("low");
-    digitalWrite(data_button, LOW);
-    delay(2000);
-  }
-  */
 }
