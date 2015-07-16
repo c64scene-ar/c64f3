@@ -207,13 +207,13 @@ C64 FDD For Fun
     Rear view of the C64 connector (female connector)
 
   < BROWN >       _____     < YELLOW > 
-    (DATA) ----- /       \ ---- SRQ
+   (DATA) ----- /       \ ---- SRQ
                / O     O \
-              |           |
-         N/C--|---> O     |
-              |           |
- CLK      -----\ O     O / ----   GND 
-< BLACK >       \___O___/      < BROWN >
+         N/C  |           |
+            --|---  O     |
+ CLK   -----  | O       O | ----  GND 
+< BLACK >      \    O    /      < BROWN >
+                \_______/  
                     |
                   ATN (2nd test PIN on the left)
                 < BLUE >
